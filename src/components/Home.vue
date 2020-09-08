@@ -1,19 +1,27 @@
 <template>
   <div class="home">
     <h3>Playlists</h3>
-    <router-link class="card" v-for="pl in playlists" :key="pl.id" :to="{ name: 'Playlist', params: { id: pl.id }}">
-      <Card />
-    </router-link>
+    <vue-horizontal-list :items="playlists" :options="{responsive: [{end: 576, size: 1}, {start: 576, end: 768, size: 2},{size: 10}]}">
+      <template v-slot:default="{playlist}">
+        <!-- <Card /> -->
+        <p>{{playlist.id}}</p>
+      </template>
+    </vue-horizontal-list>
   </div>
+  <!-- <router-link v-slot:default="{playlist}" class="card" :to="{ name: 'Playlist', params: { id: playlist.id }}">
+    <Card />
+  </router-link> -->
 </template>
 
 <script>
 import apiService from '../services/api.service'
-import Card from './Card'
+// import Card from './Card'
+import VueHorizontalList from 'vue-horizontal-list'
 
 export default {
   components: {
-    Card
+    // Card,
+    VueHorizontalList
   },
   props: [],
   data () {
