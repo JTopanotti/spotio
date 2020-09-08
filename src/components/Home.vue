@@ -1,13 +1,18 @@
 <template>
   <div class="home">
-    <h2>Home</h2>
+    <h3>Playlists</h3>
+    <Card />
   </div>
 </template>
 
 <script>
 import apiService from '../services/api.service'
+import Card from './Card'
 
 export default {
+  components: {
+    Card
+  },
   props: [],
   data () {
     return {
@@ -26,6 +31,7 @@ export default {
 
 <style lang="scss">
   .home {
-    background-color: $primary-background;
+    color: white;
+    background-color: $primary;
   }
 </style>
