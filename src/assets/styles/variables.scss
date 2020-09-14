@@ -1,8 +1,41 @@
 $primary: #121212;
 $secondary: #272727;
+$spotify-green: rgb(30, 215, 96);
+$spotify-black: rgb(25, 20, 20);
+$background: #222129;
 
 .center-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+@keyframes mouseOver {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -5px;
+    }
+}
+
+@keyframes mouseOut {
+    0% {
+        top: -5px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes imageFadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
 }

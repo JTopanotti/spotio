@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h2>SideMenu</h2>
+  <div id="sidemenu">
   </div>
 </template>
 
@@ -21,4 +20,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#sidemenu {
+  background: #040404;
+}
 </style>
