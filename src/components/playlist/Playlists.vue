@@ -28,13 +28,9 @@ export default {
   methods: {
   },
   mounted () {
-    apiService.getUserPlaylists().then(resp => {
-      console.log(resp);
-      if (resp.status === 204) {
-        this.$root.authFailed = true
-      }
-      if (resp.items) {
-        this.playlists = resp.items
+    apiService.getUserPlaylists.bind(this)().then(resp => {
+      if (resp.data && resp.data.items) {
+        this.playlists = resp.data.items
       }
     })
   },

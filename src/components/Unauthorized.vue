@@ -1,6 +1,6 @@
 <template>
   <div id="unauthorized">
-    <h1>Unauthorized scum</h1>
+    <h1>User is not authenticated</h1>
   </div>
 </template>
 
@@ -11,4 +11,10 @@ export default {
 </script>
 
 <style lang="scss">
+#unauthorized {
+  text-align: center;
+  background-color: $background;
+  color: white;
+  min-height: 100vh;
+}
 </style>

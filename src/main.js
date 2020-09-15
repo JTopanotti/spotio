@@ -8,7 +8,7 @@ Vue.config.productionTip = false
 axios.defaults.baseURL = 'http://localhost:8000'
 
 let template = `
-<div id="root">
+<div id="root" style="min-height: 100vh">
   <Unauthorized v-if="authFailed" />
   <App v-else />
 </div>

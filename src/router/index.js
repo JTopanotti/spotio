@@ -27,10 +27,9 @@ let router = new Router({
       path: '/redirect',
       beforeEnter: (to) => {
         if (to.query && to.query.code) {
-          apiService.loginRedirect(to.query.code).then(res => console.log(res))
+          apiService.loginRedirect(to.query.code).then(() => router.push({ path: '/home' }))
         }
-      },
-      redirect: '/home'
+      }
     },
     {
       path: '/home',
